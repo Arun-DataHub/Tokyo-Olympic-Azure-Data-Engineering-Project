@@ -31,31 +31,31 @@ __Workflow__
 
 1. __Data Extraction__
 
-Source: Data is extracted from a GitHub repository through an HTTP connection.
+       Source: Data is extracted from a GitHub repository through an HTTP connection.
 
-Process:
-Azure Data Factory (ADF) is used to copy the data from GitHub into Azure Data Lake Gen2.
-The data is stored in the Raw folder within the Data Lake, preserving the original, unprocessed format.
+       Process:
+       Azure Data Factory (ADF) is used to copy the data from GitHub into Azure Data Lake Gen2.
+       The data is stored in the Raw folder within the Data Lake, preserving the original, unprocessed format.
 
 2. __Data Transformation__
 
-Mounting Data: A mount point is created in Azure Databricks, pointing to the Raw folder in Azure Data Lake Gen2.
+       Mounting Data: A mount point is created in Azure Databricks, pointing to the Raw folder in Azure Data Lake Gen2.
 
-Transformation: Using Databricks and PySpark, the data is processed and transformed as needed.
+       Transformation: Using Databricks and PySpark, the data is processed and transformed as needed.
 
-Processed Data: The transformed data is stored in the Processed folder in Azure Data Lake Gen2.
+       Processed Data: The transformed data is stored in the Processed folder in Azure Data Lake Gen2.
 
 3. __Data Loading & Analytics__
 
-Creating Database: A database is created in Azure Synapse Analytics.
+       Creating Database: A database is created in Azure Synapse Analytics.
 
-Table Creation: Tables are created within the Synapse database to store the transformed data.
+       Table Creation: Tables are created within the Synapse database to store the transformed data.
 
-Analytics: SQL queries are executed on the data in Synapse to generate insights and reports.
+       Analytics: SQL queries are executed on the data in Synapse to generate insights and reports.
 
 4. __Data Visualization__
 
-The processed data is connected to Power BI to create reports and dashboards.
+       The processed data is connected to Power BI to create reports and dashboards.
 
 __Technologies Used__
 
