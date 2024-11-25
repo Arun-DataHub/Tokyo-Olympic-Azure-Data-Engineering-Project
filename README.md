@@ -1,1 +1,52 @@
 # Tokyo-Olympic-Azure-Data-Engineering-Project
+Project Overview
+The Tokyo-Olympic-Azure-Data-Engineering-Project focuses on building a data pipeline using various Azure services. The main objective is to gain practical experience with tools such as Azure Data Factory (ADF), Azure Data Lake Gen2, Azure Databricks, and Azure Synapse Analytics.
+
+Extract data from external sources (in this case, GitHub),
+Transform the data using Azure Databricks,
+Load the transformed data into Azure Synapse Analytics for analysis
+
+Architecture Image
+
+![image](https://github.com/user-attachments/assets/9840a22b-760c-4c14-886b-316fa14ac2ee)
+
+The architecture of this project consists of several interconnected Azure services. Here's an overview of the key components:
+
+Azure Data Factory (ADF): Used for data extraction and migration.
+Azure Data Lake Gen2: Serves as the storage location for both raw and processed data.
+Azure Databricks: Used for processing and transforming the data using PySpark.
+Azure Synapse Analytics: Used for advanced analytics and generating insights from the data.
+Power BI: Used to visualize the data, create reports, and generate dashboards for insights.
+
+Workflow
+1. Data Extraction
+Source: Data is extracted from a GitHub repository through an HTTP connection.
+Process:
+Azure Data Factory (ADF) is used to copy the data from GitHub into Azure Data Lake Gen2.
+The data is stored in the Raw folder within the Data Lake, preserving the original, unprocessed format.
+2. Data Transformation
+Mounting Data: A mount point is created in Azure Databricks, pointing to the Raw folder in Azure Data Lake Gen2.
+Transformation: Using Databricks and PySpark, the data is processed and transformed as needed.
+Processed Data: The transformed data is stored in the Processed folder in Azure Data Lake Gen2.
+3. Data Loading & Analytics
+Creating Database: A database is created in Azure Synapse Analytics.
+Table Creation: Tables are created within the Synapse database to store the transformed data.
+Analytics: SQL queries are executed on the data in Synapse to generate insights and reports.
+4. Data Visualization
+The processed data is connected to Power BI to create reports and dashboards.
+
+Technologies Used
+Azure Data Factory (ADF): Data extraction and migration.
+Azure Data Lake Gen2: Storage for raw and processed data.
+Azure Databricks: Data transformation with PySpark.
+Azure Synapse Analytics: Data analytics and querying.
+Power BI: Data visualization and reporting.
+Programming Languages:
+SQL: For querying in Azure Synapse Analytics.
+PySpark: For data transformation in Databricks.
+
+
+
+Summary
+The Tokyo-Olympic-Azure-Data-Engineering-Project demonstrates how to create a full data pipeline using Azure services. It involves extracting, transforming, and loading data into a cloud-based analytics platform, helping develop essential skills for working with data in the Azure environment.
+
